@@ -1,0 +1,39 @@
+{
+    "version": "0.1.0",
+    "description": "Universal SIP softphone",
+    "homepage": "https://github.com/Zenoova/ZePhone",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Zenoova/ZePhone/releases/download/v0.1.0/ZePhone_0.1.0_x64-setup.exe",
+            "hash": "ed8a325082008947c375a219383f807b6e8b91097cda0db54ed5c8faf8057280"
+        }
+    },
+    "installer": {
+        "file": "ZePhone_0.1.0_x64-setup.exe",
+        "args": [
+            "/S",
+            "/D=$dir"
+        ]
+    },
+    "uninstaller": {
+        "file": "uninstall.exe",
+        "args": "/S"
+    },
+    "shortcuts": [
+        [
+            "ZePhone.exe",
+            "ZePhone"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Zenoova/ZePhone"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Zenoova/ZePhone/releases/download/v$version/ZePhone_$version_x64-setup.exe"
+            }
+        }
+    }
+}
